@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import store from '../store';
 
 export default function Sidebar (props) {
 
@@ -21,6 +22,14 @@ export default function Sidebar (props) {
       <section>
         <h4 className="menu-item">
           <Link to='/lyrics'>LYRICS</Link>
+        </h4>
+      </section>
+      <hr />
+      <section>
+        <h4 className="menu-item">
+          {console.log(store.getState())}
+          <Link to='/stations'>STATIONS</Link>
+          }
         </h4>
       </section>
       <hr />
