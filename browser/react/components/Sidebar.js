@@ -27,7 +27,6 @@ export default function Sidebar (props) {
       <hr />
       <section>
         <h4 className="menu-item">
-          {console.log(store.getState())}
           <Link to='/stations'>STATIONS</Link>
           }
         </h4>

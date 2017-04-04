@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Stations from '../components/Stations';
+import Station from '../components/Station';
 
 
 function mapStateToProps(state) {
@@ -14,7 +15,7 @@ function mapDispatchToProps(dispatch) {
 
 
 function createStationsObj(songs){
-	
+
 	let stationsObj = {};
 
 	for(let i = 0; i < songs.length; i++ ){
@@ -23,16 +24,16 @@ function createStationsObj(songs){
 			stationsObj[songs[i].genre].push(songs[i]);
 		}
 		else {
-			stationsObj[songs[i].genre] = [songs[i]]; 
+			stationsObj[songs[i].genre] = [songs[i]];
 		}
-		
+
 	}
 
-	return stationsObj; 
+	return stationsObj;
 
 }
 
 
-const StationsContainer = connect(mapStateToProps, mapDispatchToProps)(Stations); 
+const StationsContainer = connect(mapStateToProps, mapDispatchToProps)(Stations);
 
-export default StationsContainer; 
+export default StationsContainer;
